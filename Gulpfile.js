@@ -45,7 +45,7 @@ gulp.task('styles', function() {
 var paths = {
   htmls:          ['*.html'],
   // basicshopStyles: 'ccs/less/basicShop/*.less',
-  styles:         'css/less/**/*.less'
+  styles:         'css/less/*.less'
 };
 
 gulp.task('watch', function(cb) {

@@ -1,7 +1,8 @@
-@import "side-form";
+// @import "side-form";
 @import "myPerfectMixins";
-@import "items";
-@import "popup";
+// @import "items";
+// @import "popup";
+@import "fonts";
 
 .upper {
   text-transform: uppercase;
@@ -27,11 +28,311 @@
   text-align: center;
 }
 
-@pt-sans: 'PT Sans', sans-serif;
+@Pt-sans: 'PT Sans', sans-serif;
 @open-sans: 'Open Sans', sans-serif;
-@scada: 'Scada', sans-serif;
+@Myriad: 'MyriadPro', sans-serif;
 
+@dark: #3c3c3c;
+@light-dark: #4e4e4e;
+@red: #f24842;
+@white: #efefef;
+@yellow: #ffd500;
+
+.white {
+  color: @white;
+}
+.row {
+  margin-left: 10px;
+  margin-right: 10px;
+  .clearfix();
+}
 section:first-of-type {
-  background: #262626
+  background: url(../tmp/img/photo_bg.png) top center no-repeat, #262626;
+}
+section:nth-of-type(3) {
+  background: radial-gradient(ellipse at center, rgba(0,79,114,0.85) 0%,rgba(0,80,115,0.85) 1%,rgba(12,138,153,1) 50%,rgba(2,84,121,0.85) 100%); 
 }
 
+h1 {
+  color: @dark;
+  font: bold 60px @Myriad;
+}
+h2 {
+  color: @dark;
+  font: 600 48px @Myriad;
+}
+h3 {
+  color: @dark;
+  font: 600 24px @Myriad;
+  &.red {
+    color: @red;
+  }
+}
+p {
+  color: @dark;
+  font: 18px @Myriad;
+}
+// h4 {
+//   color: @dark;
+//   font: 600 24px @Myriad;
+// }
+
+header {
+  .contact {
+    .tel {
+      color: @dark;
+      font: 24px @Myriad;
+      & + button {
+        border: none;
+        background: transparent;
+        color: @red;
+        font: 14px @Myriad;
+        display: inline-block;
+        border-bottom: 1px dashed @red;
+        padding: 0;
+      }
+    }
+
+  }
+}
+.button {
+  display: block;
+  border: none;
+  padding: 10px 0;
+  font: 18px @Myriad;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: inset 0 -3px 0 0 fade(#c6263d, 75%);
+  &.red {
+    background: @red;
+  }
+}
+.offer {
+  background: @white;
+  border-radius: 4px;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  form {
+    border-radius: 0 4px 4px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 220px;
+    background: @yellow;
+    padding: 25px;
+    & > * {
+      display: block;
+      width: 100%;
+      border: none;
+    }
+    & > * + * {
+      margin-top: 10px;
+    }
+    input {
+      display: block;
+      border: none;
+      padding-left: 5px;
+      border-radius: 4px;
+      height: 30px;
+      .placeholder({
+          font: 14px @Myriad;
+          color: @light-dark;
+        })
+    }
+  }
+  .bow {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 107px;
+    background: url(../tmp/img/bow.png) top left no-repeat;
+    top: 0;
+    left: 10px;
+  }
+  .arrow {
+    position: absolute;
+    top: -20px;
+    left: 150px;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color: @white transparent;
+  }
+}
+
+.features {
+  .feature-summary {
+    width: 190px;
+    .feature-header {
+      height: 140px;
+      .text-center();
+      padding-top: 85px;
+      padding-bottom: 38px;
+      color: @dark;
+      font: 18px @Myriad;
+    }
+    .feature-cells {
+      &>div {
+        height: 34px;
+        padding: 12px;
+        background: #f6f6f6;
+        &:nth-of-type(even) {
+          background: #e2e2e2;
+        }
+      }
+    }
+  }
+  .feature {
+    color: #fff;
+    width: 150px;
+    background: #ededed;
+    font-family: @Myriad;
+    .button {
+      margin: 10px auto;
+      width: 130px;
+      font-size: 14px;
+    }
+    .feature-header {
+      font-size: 18px;
+      padding-top: 22px;
+      height: 140px;
+      position: relative;
+      .feature-price {
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        // margin-top: 15px;
+        height: 87px;
+        padding: 30px 0 0;
+        font-size: 30px;
+        font-weight: 600;
+        &.ru {
+          padding-right: 22px;
+          &:after {
+            content: '';
+            position: absolute;
+            top: 35px;
+            right: 30px;
+            width: 22px;
+            height: 25px;
+            background: url(../tmp/img/ruble-white.png);
+          }
+        }
+        &.ru-black {
+          padding-right: 22px;
+          &:after {
+            content: '';
+            position: absolute;
+            top: 35px;
+            right: 30px;
+            width: 22px;
+            height: 25px;
+            background: url(../tmp/img/ruble-black.png);
+          }
+        }
+      }
+    }
+    .feature-cells {
+      color: @dark;
+      background: #fefefe;
+      &>div {
+        &:nth-of-type(2n+1) {
+          background: #ebebeb;
+        }
+        height: 34px;
+        padding: 12px 0;
+      }
+    }
+    &.best {
+      color: @dark;
+      position: relative;
+      .meetings {
+        .upper();
+        font-size: 12px;
+        position: absolute;
+        width: 100%;
+        line-height: 25px;
+        top: -25px;
+        height: 25px;
+        background: #ffc500;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 10px;
+          top: 4px;
+          width: 13px;
+          height: 13px;
+          background: url(../tmp/img/star_1.png) 50% 50% no-repeat;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          right: 10px;
+          top: 4px;
+          width: 13px;
+          height: 13px;
+          background: url(../tmp/img/star_1.png) 50% 50% no-repeat;
+        }
+      }
+      .feature-header {
+          background: #ffa700;
+        .feature-price {
+          background-color: #ffc500;
+        }
+      }
+      .feature-cells {
+        color: #fff;
+        background: #ffc500;
+        & > div {
+          &:nth-of-type(2n+1) {
+            background: #ffa700;
+          }
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .feature-header {
+        background-color: #52b5d5;
+        .feature-price {
+          background: #63c2dd;
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      .feature-header {
+        background-color: #3591ca;
+        .feature-price {
+          background: #44a3d5;
+        }
+      }
+    }
+    &:nth-of-type(5) {
+      .feature-header {
+        background-color: #1a3e7b;
+        .feature-price {
+          background: #234e8e;
+        }
+      }
+    }
+    &:nth-of-type(6) {
+      .feature-header {
+        background-color: #14305f;
+        .feature-price {
+          background: #193b75;
+        }
+      }
+    }
+  }
+}
+
+.certificates {
+  height: 390px;
+  background: url('../tmp/img/brochure-(1).png') 50% 50% no-repeat;
+  p {
+    font: 18px @Pt-sans;
+  }
+}
