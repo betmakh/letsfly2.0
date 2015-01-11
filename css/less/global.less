@@ -28,9 +28,9 @@
   text-align: center;
 }
 
-@Pt-sans: 'PT Sans', sans-serif;
+@pt-sans: 'PT Sans', sans-serif;
 @open-sans: 'Open Sans', sans-serif;
-@Myriad: 'MyriadPro', sans-serif;
+@myriad: 'MyriadPro', sans-serif;
 
 @dark: #3c3c3c;
 @light-dark: #4e4e4e;
@@ -55,51 +55,54 @@ section:nth-of-type(3) {
 
 h1 {
   color: @dark;
-  font: bold 60px @Myriad;
+  font: bold 60px @myriad;
 }
 h2 {
   color: @dark;
-  font: 600 48px @Myriad;
+  font: 600 48px @myriad;
 }
 h3 {
   color: @dark;
-  font: 600 24px @Myriad;
+  font: 600 24px @myriad;
   &.red {
     color: @red;
   }
 }
+h6 {
+  font: 18px @pt-sans;
+  color: @dark;
+}
 p {
   color: @dark;
-  font: 18px @Myriad;
+  font: 18px @myriad;
 }
 // h4 {
 //   color: @dark;
-//   font: 600 24px @Myriad;
+//   font: 600 24px @myriad;
 // }
 
-header {
-  .contact {
-    .tel {
-      color: @dark;
-      font: 24px @Myriad;
-      & + button {
-        border: none;
-        background: transparent;
-        color: @red;
-        font: 14px @Myriad;
-        display: inline-block;
-        border-bottom: 1px dashed @red;
-        padding: 0;
-      }
+.contact {
+  .tel {
+    color: @dark;
+    font: 24px @myriad;
+    & + button {
+      border: none;
+      background: transparent;
+      color: @red;
+      font: 14px @myriad;
+      display: inline-block;
+      border-bottom: 1px dashed @red;
+      padding: 0;
     }
-
   }
+}
+header {
 }
 .button {
   display: block;
   border: none;
   padding: 10px 0;
-  font: 18px @Myriad;
+  font: 18px @myriad;
   color: #fff;
   text-align: center;
   border-radius: 4px;
@@ -108,20 +111,9 @@ header {
     background: @red;
   }
 }
-.offer {
-  background: @white;
-  border-radius: 4px;
-  position: relative;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  form {
-    border-radius: 0 4px 4px 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 220px;
-    background: @yellow;
+
+form {
+  background: @yellow;
     padding: 25px;
     & > * {
       display: block;
@@ -138,10 +130,25 @@ header {
       border-radius: 4px;
       height: 30px;
       .placeholder({
-          font: 14px @Myriad;
+          font: 14px @myriad;
           color: @light-dark;
         })
     }
+}
+.offer {
+  background: @white;
+  border-radius: 4px;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  form {
+    border-radius: 0 4px 4px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 220px;
+    
   }
   .bow {
     content: '';
@@ -172,7 +179,7 @@ header {
       padding-top: 85px;
       padding-bottom: 38px;
       color: @dark;
-      font: 18px @Myriad;
+      font: 18px @myriad;
     }
     .feature-cells {
       &>div {
@@ -189,7 +196,7 @@ header {
     color: #fff;
     width: 150px;
     background: #ededed;
-    font-family: @Myriad;
+    font-family: @myriad;
     .button {
       margin: 10px auto;
       width: 130px;
@@ -333,6 +340,137 @@ header {
   height: 390px;
   background: url('../tmp/img/brochure-(1).png') 50% 50% no-repeat;
   p {
-    font: 18px @Pt-sans;
+    font: 18px @pt-sans;
+  }
+}
+
+section:nth-of-type(4) {
+  h3 {
+    font-family: @pt-sans;
+    font-weight: bold;
+  }
+  p {
+    font: 21px @pt-sans;
+  }
+}
+
+.plane {
+  .plane-top {
+    position: relative;
+    .feature:not(.middle) {
+      position: relative;
+      top: 80px;
+    }
+  }
+  .feature {
+      vertical-align: middle;
+      &.middle {
+        img {
+          display: block;
+          margin: auto;
+        }
+        .feature-info {
+          width: 100%;
+          .text-center();
+        }
+      }
+      img {
+        vertical-align: middle;
+        display: inline-block;
+      }
+      .feature-info {
+        vertical-align: middle;
+        display: inline-block;
+      }
+  }
+}
+.rel {
+  position: relative;
+}
+section.last {
+  background: radial-gradient(ellipse at center, rgba(0,79,114,0.85) 0%,rgba(0,80,115,0.85) 1%,rgba(12,138,153,1) 50%,rgba(2,84,121,0.85) 100%); 
+  .certs {
+    img + img {
+      margin-left: 15px;
+    }
+  }
+  .cloud.contact {
+    padding-top: 50px;
+    padding-right: 10px;
+    width: 223px;
+    height: 126px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../tmp/img/ideas.png) top left no-repeat;
+  }
+  form {
+    border-radius: 8px;
+    width: 272px;
+    padding: 40px 14px;
+    h3 {
+      white-space: nowrap;
+      letter-spacing: -3px;
+    }
+    p {
+      font: 16px @pt-sans;
+      color: @dark;
+    }
+    input, button {
+      width: 190px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.feedbacks {
+  .name {
+    font-weight: 400;
+    font-size: 30px;
+  }
+  .cloud {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background: url(../tmp/img/Cloud.png) center bottom no-repeat;
+    p {
+      font: 16px @pt-sans;
+      color: @dark;
+      width: 268px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    .button {
+      font: 14px @pt-sans;
+      padding: 10px 17px;
+      display: inline-block;
+    }
+  }
+  .feedback-header {
+    &>* {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .feedback-content {
+    border-radius: 8px;
+    color: @dark;
+    font: 18px @pt-sans;
+    padding: 20px;
+    border: 1px solid #d1d1d1;
+    background: #fff;
+    height: 155px;
+    position: relative;
+    margin-top: 20px;
+    &:after {
+      content: '';
+      position: absolute;
+      border-width: 0 10px 15px 10px;
+      border-color: #fff transparent;
+      top: -15px;
+      left: 50px;
+      border-style: solid; 
+    }
   }
 }
