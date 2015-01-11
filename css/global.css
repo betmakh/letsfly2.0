@@ -95,3 +95,7 @@ section.last form button,section.last form input{width:190px;display:block;margi
 .feedbacks .feedback-header>*{display:inline-block;vertical-align:middle}
 .feedbacks .feedback-content{border-radius:8px;color:#3c3c3c;font:18px 'PT Sans',sans-serif;padding:20px;border:1px solid #d1d1d1;background:#fff;height:155px;position:relative;margin-top:20px}
 .feedbacks .feedback-content:after{content:'';position:absolute;border-width:0 10px 15px;border-color:#fff transparent;top:-15px;left:50px;border-style:solid}
+.photos{margin-left:-25px;margin-right:-25px;margin-bottom:20px}
+.photos .col{height:1005px;overflow:hidden;float:left;width:200px}
+.photos .col>img+img{margin-top:5px}
+.photos img{display:inline-block;vertical-align:top}

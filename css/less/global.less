@@ -474,3 +474,28 @@ section.last {
     }
   }
 }
+
+.photos {
+  margin-left: -25px;
+  margin-right: -25px;
+  margin-bottom: 20px;
+  .col {
+    height: 1005px;
+    overflow: hidden;
+    float: left;
+    // display: flex;
+    // align-items: stretch;
+    width: 200px;
+
+    // flex-direction: column;
+    &>img {
+      &+ img {
+        margin-top: 5px;
+      }
+    }
+  }
+  img {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
