@@ -1,7 +1,7 @@
 // @import "side-form";
 @import "myPerfectMixins";
 // @import "items";
-// @import "popup";
+@import "popup";
 @import "fonts";
 
 .upper {
@@ -46,13 +46,50 @@
   margin-right: 10px;
   .clearfix();
 }
+.timer {
+  z-index: 2;
+}
 section:first-of-type {
   background: url(../tmp/img/photo_bg.png) top center no-repeat, #262626;
+  h1 {
+    margin-top: 60px;
+    margin-bottom: 0;
+    & + h3 {
+      margin-top: 10px;
+      margin-bottom: 60px;
+    }
+  }
+
+}
+section:nth-of-type(2) {
+  h2 {
+    margin-bottom: 70px;
+  }
+  &>.container_12 {
+    position: relative;
+    .path {
+      content: '';
+      position: absolute;
+      width: 278px;
+      height: 200px;
+      background: url(../tmp/img/path.png) 0 0 no-repeat;
+      top: 0;
+      left: 0;
+    }
+  }
+  .feature {
+    margin-bottom: 80px;
+  }
 }
 section:nth-of-type(3) {
   background: radial-gradient(ellipse at center, rgba(0,79,114,0.85) 0%,rgba(0,80,115,0.85) 1%,rgba(12,138,153,1) 50%,rgba(2,84,121,0.85) 100%); 
 }
-
+section:nth-of-type(4) {
+  padding-bottom: 10px;
+}
+section:nth-of-type(5) {
+  padding-bottom: 50px;
+}
 h1 {
   color: @dark;
   font: bold 60px @myriad;
@@ -97,6 +134,11 @@ p {
   }
 }
 header {
+  padding-top: 20px;
+  .contact {
+    position: relative;
+    top: 20px;
+  }
 }
 .button {
   display: block;
@@ -140,15 +182,26 @@ form {
   border-radius: 4px;
   position: relative;
   margin-top: 40px;
+  height: 185px;
   margin-bottom: 20px;
+  img {
+    position: relative;
+    right: 20px;
+  }
   form {
     border-radius: 0 4px 4px 0;
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
-    width: 220px;
+    width: 240px;
     
+  }
+  p {
+    letter-spacing: -1px;
+  }
+  h3 {
+    margin-top: 40px;
   }
   .bow {
     content: '';
@@ -168,6 +221,9 @@ form {
     border-width: 0 20px 20px 20px;
     border-color: @white transparent;
   }
+}
+.video {
+  margin-bottom: 20px;
 }
 
 .features {
@@ -338,7 +394,7 @@ form {
 
 .certificates {
   height: 390px;
-  background: url('../tmp/img/brochure-(1).png') 50% 50% no-repeat;
+  background: url('../tmp/img/brochure-(1).png') 80% 410% no-repeat;
   p {
     font: 18px @pt-sans;
   }
@@ -388,8 +444,12 @@ section:nth-of-type(4) {
   position: relative;
 }
 section.last {
-  background: radial-gradient(ellipse at center, rgba(0,79,114,0.85) 0%,rgba(0,80,115,0.85) 1%,rgba(12,138,153,1) 50%,rgba(2,84,121,0.85) 100%); 
+  background: url(../tmp/img/bg-last.png) 50% 108% no-repeat, radial-gradient(ellipse at center, rgba(0,79,114,0.85) 0%,rgba(0,80,115,0.85) 1%,rgba(12,138,153,1) 50%,rgba(2,84,121,0.85) 100%); 
+  h2 {
+    margin-bottom: 100px;
+  }
   .certs {
+    margin-bottom: 135px;
     img + img {
       margin-left: 15px;
     }
@@ -400,7 +460,7 @@ section.last {
     width: 223px;
     height: 126px;
     position: absolute;
-    top: 0;
+    top: 185px;
     right: 0;
     background: url(../tmp/img/ideas.png) top left no-repeat;
   }
@@ -408,9 +468,14 @@ section.last {
     border-radius: 8px;
     width: 272px;
     padding: 40px 14px;
+    margin-bottom: 25px;
     h3 {
       white-space: nowrap;
+      margin-top: 0px;
       letter-spacing: -3px;
+    }
+    button {
+      margin-top: 15px;
     }
     p {
       font: 16px @pt-sans;
@@ -426,14 +491,19 @@ section.last {
 }
 
 .feedbacks {
+  & + .feedbacks {
+    padding-top: 50px;
+  }
   .name {
     font-weight: 400;
     font-size: 30px;
   }
   .cloud {
-    padding-top: 100px;
+    padding-top: 174px;
     padding-bottom: 50px;
     background: url(../tmp/img/Cloud.png) center bottom no-repeat;
+    position: relative;
+    bottom: 50px;
     p {
       font: 16px @pt-sans;
       color: @dark;
@@ -448,9 +518,13 @@ section.last {
     }
   }
   .feedback-header {
+    padding-left: 15px;
     &>* {
       display: inline-block;
       vertical-align: middle;
+      & + * {
+        padding-left: 40px; 
+      }
     }
   }
   .feedback-content {
@@ -462,14 +536,14 @@ section.last {
     background: #fff;
     height: 155px;
     position: relative;
-    margin-top: 20px;
+    margin-top: 30px;
     &:after {
       content: '';
       position: absolute;
       border-width: 0 10px 15px 10px;
       border-color: #fff transparent;
       top: -15px;
-      left: 50px;
+      left: 58px;
       border-style: solid; 
     }
   }

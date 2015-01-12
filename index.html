@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/flipclock.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" type="text/css" href="css/global.css">    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/flipclock.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,20 +20,21 @@
 </head>
 <body>
     <!-- time for timer -->
-    <div id="date" style="display:none;">11 January 2015 10:12</div>
+    <div id="date" style="display:none;">13 January 2015 10:12</div>
 
     <!-- popup -->
-    <!-- <div class="popup-wrapper">
-        <div class="popup">
+    <div class="popup-wrapper active">
+        <div class="popup ">
             <button class="exit"></button>
-            <h5 class="upper">Форма обратной связи:</h5>
+            <h3 class="upper">Остались вопросы?</h3>
+            <P>Отправьте заявку на звонок и наш менеджер свяжется с Вами</P>
             <form action="POST">
-                <input type="text" placeholder="ИМЯ">
-                <input type="tel" placeholder="ТЕЛЕФОН">
-                <button class="upper red button" type="submit">ЗАКАЗАТЬ</button>
+                <input type="text" placeholder="Имя">
+                <input type="tel" placeholder="Телефон">
+                <button class="upper red button" type="submit">Отправить</button>
             </form>
         </div>
-    </div> -->
+    </div>
     
     <!-- header -->
     
@@ -89,7 +90,8 @@
 
     <!-- 2nd section -->
     <section>
-        <div class="container_12 features clearfix">
+        <div class="container_12 features">
+        <div class="path"></div>
         <div class="row">
             <h2 class="text-center">Пакеты услуг</h2>
             <div class="left feature-summary">
@@ -314,7 +316,7 @@
                     <div class="grid_6 alpha">
                         <div class="feedback-header">
                             <img src="tmp/img/phoro (1).png" alt="photo">
-                            <h3 class="white name">Гаврилов Андрей</h3>
+                            <h3 class="white  text-center name">Гаврилов Андрей</h3>
                         </div>
                         <div class="feedback-content">Было круто! Ощущение во время взлета и от самого полета не описать! На виражах захватывало дух. И пилот клевый, все объяснил, показал как управлять. Никогда не думал, что смогу сказать, что "Я управлял самолетом".</div>
                     </div>
@@ -337,7 +339,7 @@
                     <div class="grid_6 omega">
                         <div class="cloud text-center">
                             <p class="text-center">Если вы летали с нами - пришлите нам ваш отзыв и фото на почту и мы подарим вам 10% скидку на покупку любого сертификата.</p>
-                            <button class="button red">Написать отзыв</button>
+                            <button class="button toggle-popup red">Написать отзыв</button>
                         </div>
                     </div>
                 </div>
@@ -360,8 +362,8 @@
                     <form action="">
                         <h3 class="text-center upper">Остались вопросы?</h3>
                         <p class="text-center">Отправьте заявку на звонок и наш менеджер свяжется с Вами</p>
-                        <input type="text" placeholder="ИМЯ">
-                        <input type="tel" placeholder="ТЕЛЕФОН">
+                        <input type="text" placeholder="Имя">
+                        <input type="tel" placeholder="Телефон">
                         <button class="upper red button" type="submit">отправить</button>
                     </form>
                 </div>
@@ -369,7 +371,7 @@
                     <div class="cloud contact">
                         <div class=" clearfix">
                             <address class="tel rights text-right">+7(499)394-39-81</address>
-                            <button class="right">Заказать звонок</button>
+                            <button class="right toggle-popup">Заказать звонок</button>
                         </div>
                     </div>
                 </div>
