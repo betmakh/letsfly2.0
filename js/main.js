@@ -1,5 +1,7 @@
 $(function() {
 
+  $('.img-link').magnificPopup({type:'image'});
+
   $('button.toggle-popup').on('click', function(event) {
     $('.popup-wrapper').addClass('active');
   });
