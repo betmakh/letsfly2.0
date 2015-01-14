@@ -463,7 +463,9 @@ section:nth-of-type(4) {
 }
 section.last {
   position: relative;
-  background: url(../tmp/img/bg-last.png) 50% 108% no-repeat, linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(41,137,216,0) 80.5%, rgba(0,162,54,1) 80.5%,rgba(0,162,54,1) 100%), radial-gradient(ellipse at center, rgba(0,79,114,0.85) 0%,rgba(0,80,115,0.85) 1%,rgba(12,138,153,1) 50%,rgba(2,84,121,0.85) 100%); 
+  background: url(../tmp/img/bg-last.png) 50% 113% no-repeat, 
+  // linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(41,137,216,0) 80.5%, rgba(0,162,54,1) 80.5%,rgba(0,162,54,1) 100%),
+  radial-gradient(ellipse at center, rgba(0,79,114,0.85) 0%,rgba(0,80,115,0.85) 1%,rgba(12,138,153,1) 50%,rgba(2,84,121,0.85) 100%); 
   &:after {
     // content: '';
     position: absolute;
@@ -483,7 +485,7 @@ section.last {
   }
   .certs {
     margin-bottom: 135px;
-    img {
+    & > * {
       display: inline-block;
       transition: .3s linear;
       &:hover {
@@ -503,6 +505,15 @@ section.last {
     top: 185px;
     right: 0;
     background: url(../tmp/img/ideas.png) top left no-repeat;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 139px;
+      height: 124px;
+      background: url(../tmp/img/car.png) 0 0 no-repeat;
+      top: -150px;
+      left: -150px;
+    }
   }
   form {
     border-radius: 8px;
@@ -593,9 +604,10 @@ section.last {
   margin-left: -25px;
   margin-right: -25px;
   margin-bottom: 20px;
-  .col {
     height: 1005px;
     overflow: hidden;
+  .col {
+    .clearfix;
     float: left;
     // display: flex;
     // align-items: stretch;
@@ -603,6 +615,10 @@ section.last {
 
     // flex-direction: column;
     &>a {
+      transition: .3s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
       &+ a {
         margin-top: 5px;
       }
